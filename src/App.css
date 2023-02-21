@@ -59,6 +59,7 @@ nav a:hover {
   font-size: 2rem;
   cursor: pointer;
   display: none;
+  color: #333333;
 }
 
 section {
@@ -325,6 +326,69 @@ section {
   color: white;
 }
 
+.reserve-table-heading {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: -1.4rem;
+}
+
+.header-reserve {
+  width: 100vw; /* width of container */
+  height: 20rem; /* height of container */
+  object-fit: cover;
+}
+
+.reserve-header-text {
+  background-color: #495e57;
+  padding: 0 3rem 0 3rem;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  border-radius: 0.5rem;
+}
+
+.booking-form {
+  padding: 2rem 0 0.5rem 0;
+  text-align: center;
+  background-color: #EDEFEE;
+}
+
+.booking-form label{
+  font-weight: bold;
+  color: black;
+}
+
+.booking-form input {
+  height: 10%;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+.booking-form select {
+  height: 10%;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+.booking-form > div {
+  margin-bottom: 1.5rem;
+}
+
+.action-button {
+  background-color: var(--yellow-color);
+  border-radius: 0.5rem;
+  border: none;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: black;
+}
+
  @media (max-width: 1560px) {
   header {
     padding: 15px 40px;
@@ -343,21 +407,21 @@ section {
     display: initial;
     color: #f4ce14;
   }
-  header .navbar{
+  header nav ul{
     position: absolute;
-    top: 0;
+    top: -450px;
     left: 0;
     right: 0;
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: #f4ce14;
+    background: white;
     transition: .3s;
   }
-  header .navbar.active{
+  header nav active{
     top: 70px
   }
-  .navbar a{
+  nav a{
     padding: 1.5rem;
     display: block;
   }
