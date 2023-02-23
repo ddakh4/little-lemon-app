@@ -1,12 +1,17 @@
 import React from "react";
-import Nav from "../../components/Nav";
-import Main from "../../components/Main";
-import Footer from "../../components/Footer";
-import Home from "../../components/Home";
+import About from '../../components/About'
+import Home from '../../components/Home'
+import Menu from '../../components/Menu'
+import Testimonials from '../../components/Testimonials'
 
 function HomePage() {
-    return(
-            <Nav />
+    return (
+        <>
+            <Home />
+            <Menu />
+            <Testimonials />
+            <About />
+        </>
     )
 }
 

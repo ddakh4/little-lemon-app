@@ -69,7 +69,7 @@ function BookingForm(props) {
 
    return (
       <>
-         <form className="booking-form" data-testid="booking-form" onSubmit={handleSubmit}>
+         <form className="booking-form" data-testid="booking-form" onSubmit={handleSubmit} aria-label="Booking form">
             <div>
                <label htmlFor="res-date">Choose date</label> <br></br>
                <input type="date" id="res-date" data-testid="date"
@@ -103,7 +103,7 @@ function BookingForm(props) {
                {formErrors.occasion && <div className="error">{formErrors.occasion}</div>}
             </div>
             <div>
-               <Link className="action-button" to="/confirmation" data-testid="submit" onClick={handleSubmit}>
+               <Link className="action-button" to="/confirmation" data-testid="submit" onClick={handleSubmit} aria-label="Book Table Button">
                   Book Table
                </Link>
             </div>
