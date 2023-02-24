@@ -55,8 +55,10 @@ function BookingForm(props) {
          errors.finalTime = "Please select a time.";
       }
 
-      if (!guests) {
+      if (!guests || guests === 0) {
          errors.guests = "Please choose the number of guests.";
+      } else if ( guests > 12) {
+         errors.guests = "Number of guests should not exceed 12.";
       }
 
       if (!occasion) {
