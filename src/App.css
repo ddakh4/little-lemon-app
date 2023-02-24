@@ -39,18 +39,18 @@ header {
   height: 100px;
 }
 
-nav ul{
+.navbar ul{
   display: flex;
 }
 
-nav a {
+.navbar a {
   color:black;
   font-size: 1.1rem;
   padding: 20px 30px;
   font-weight: bold;
 }
 
-nav a:hover {
+.navbar a:hover {
   color: var(--yellow-color);
   transition: .4s;
 }
@@ -399,7 +399,7 @@ section {
   padding: 20rem 0 20rem 0;
   display: flex;
   text-align: center;
-  background-color: #f4ce14;
+  background-color: white;
   display: flex;
   flex-direction: column;
   grid-gap: 1.5rem;
@@ -409,10 +409,12 @@ section {
   font-size: large;
   margin-top: 0;
   margin-bottom: 0;
+  color: #495e57;
 }
 
 .confirmation-header h4 {
   font-size: medium;
+  color: #495e57;
 }
 
 
@@ -435,7 +437,7 @@ section {
     display: initial;
     color: #f4ce14;
   }
-  header nav ul{
+  .navbar ul{
     position: absolute;
     top: -450px;
     left: 0;
@@ -446,10 +448,42 @@ section {
     background: white;
     transition: .3s;
   }
-  header nav active{
-    top: 70px
+  .navbar active{
+    /* top: 70px; */
+    display: block;
+    background-color: #f4ce14;
   }
-  nav a{
+  
+.navbar.active ul {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbar.active li {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.navbar.active a {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar.active a:hover {
+  color: var(--yellow-color);
+  transition: .4s;
+}
+  .navbar a{
     padding: 1.5rem;
     display: block;
   }
